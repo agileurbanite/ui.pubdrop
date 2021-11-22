@@ -1,3 +1,3 @@
-export const App = () => {
-  return <div>App</div>
-};
+import { ClaimPage } from './ClaimPage/ClaimPage';
+
+export const App = () => <ClaimPage />;
