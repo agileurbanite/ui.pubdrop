@@ -1,10 +1,14 @@
 import { StrictMode } from 'react';
-import ReactDOM from 'react-dom';
+import { render } from 'react-dom';
+import { StoreProvider } from 'easy-peasy';
 import { App } from './ui/components/App';
+import { store } from './store';
 
-ReactDOM.render(
+render(
   <StrictMode>
-    <App />
+    <StoreProvider store={store}>
+      <App />
+    </StoreProvider>
   </StrictMode>,
   document.getElementById('root'),
 );
