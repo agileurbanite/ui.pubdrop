@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 18vh;
+  margin-bottom: 5vh;
+}
+
+.nearText {
+  height: 45px;
+}
+
+.nearIcon {
+  height: 100px;
+  margin: 0 70px;
+}
+
+.miami {
+  font-size: 62px;
+  line-height: 85px;
+  letter-spacing: 3.244px;
+}

@@ -1,6 +1,7 @@
 import { useStoreActions, useStoreState } from 'easy-peasy';
 import { useEffect } from 'react';
 import { pages } from '../../config/pages';
+import { Logo } from './Logo/Logo';
 import { Main } from './Main/Main';
 import { VerifyCode } from './VerifyCode/VerifyCode';
 import { AlreadyClaimed } from './AlreadyClaimed/AlreadyClaimed';
@@ -20,6 +21,7 @@ export const App = () => {
 
   return (
     <div className={styles.container}>
+      <Logo />
       {page === pages.main && <Main />}
       {page === pages.verifyCode && <VerifyCode />}
       {page === pages.alreadyClaimed && <AlreadyClaimed />}

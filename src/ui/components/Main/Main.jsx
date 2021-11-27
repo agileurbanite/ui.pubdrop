@@ -8,10 +8,10 @@ export const Main = () => {
 
   return (
     <div className={styles.container}>
-      <h1>Welcome</h1>
-      <h2>Claim your NEAR drop</h2>
+      <h1 className={styles.h1}>Welcome</h1>
+      <h2 className={styles.h2}>Claim your NEARDROP</h2>
       <Input placeholder="Enter your email" />
-      <Button text="submit" onClick={sendEmail} />
+      <Button text="Submit" onClick={sendEmail} />
     </div>
   );
 };

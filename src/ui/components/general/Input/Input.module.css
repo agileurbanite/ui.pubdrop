@@ -1,0 +1,18 @@
+.input {
+  height: 48px;
+  width: 350px;
+  position: relative;
+  display: inline-flex;
+  border: 3px solid #a463b0;
+  border-radius: 25px;
+  outline: none;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  background-color: #000000bf;
+  box-sizing: border-box;
+}
+
+.input::placeholder {
+  color: white;
+}

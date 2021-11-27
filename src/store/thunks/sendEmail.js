@@ -7,7 +7,7 @@ export const sendEmail = thunk(async (actions, payload, helpers) => {
   const { email = 'test@test.com' } = payload;
 
   try {
-    await ky.post(api.sendEmail, { json: { email } });
+    await ky.post(api.sendEmail, { json: { email } }).json();
     // actions.toPage({ page: pages.verifyCode });
   } catch (e) {
     const a = await e.response.json();
