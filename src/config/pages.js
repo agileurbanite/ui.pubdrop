@@ -1,6 +1,6 @@
 export const pages = {
-  main: 'main',
+  signup: 'signup',
   alreadyClaimed: 'already-claimed',
   campaignOver: 'campaign-over',
-  verifyCode: 'main.verify-code'
+  confirmEmail: 'confirm-email'
 };

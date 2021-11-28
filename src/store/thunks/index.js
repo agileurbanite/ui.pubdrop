@@ -1,9 +1,9 @@
 import { initApp } from './initApp';
-import { sendEmail } from './sendEmail';
-import { verifyCode } from './verifyCode';
+import { signup } from './signup';
+import { confirmEmail } from './confirmEmail';
 
 export const thunks = {
   initApp,
-  sendEmail,
-  verifyCode,
+  signup,
+  confirmEmail,
 };

@@ -1,15 +1,25 @@
+import { persist } from 'easy-peasy';
 import { pages } from '../config/pages';
 
-export const initState = {
+const initState = {
   email: null,
-  isEmailConfirmed: false,
   claimPublicKey: null,
   claimSecretKey: null,
-  isLoading: {
-    app: null,
+  loading: {
+    app: false,
+    sendEmail: false,
+    confirmEmail: false,
+  },
+  errors: {
+    sendEmail: null,
+    confirmEmail: null,
   },
   navigation: {
-    page: pages.main,
-    params: null,
+    page: pages.signup,
   },
 };
+
+export const persistInitState = persist(initState, {
+  storage: 'localStorage',
+  allow: ['email', 'claimPublicKey', 'claimSecretKey'],
+});

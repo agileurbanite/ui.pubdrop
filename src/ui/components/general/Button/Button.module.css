@@ -1,7 +1,7 @@
 .button {
   height: 48px;
   min-width: 200px;
-  margin-top: 20px;
+  margin-top: 30px;
   border-radius: 25px;
   outline: none;
   border: none;
@@ -9,6 +9,9 @@
   background: linear-gradient(180deg, #a463b0 0%, #5f8afa 100%);
   box-shadow: 0 0 10px #000000;
   color: white;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 500;
+}
+.button > span {
+  margin-right: 4px;
 }

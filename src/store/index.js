@@ -1,11 +1,11 @@
 import { createStore } from 'easy-peasy';
-import { initState } from './initState';
+import { persistInitState } from './initState';
 import { actions } from './actions';
 import { thunks } from './thunks';
 
 export const store = createStore(
   {
-    ...initState,
+    ...persistInitState,
     ...actions,
     ...thunks,
   },

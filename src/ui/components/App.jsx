@@ -2,30 +2,32 @@ import { useStoreActions, useStoreState } from 'easy-peasy';
 import { useEffect } from 'react';
 import { pages } from '../../config/pages';
 import { Logo } from './Logo/Logo';
-import { Main } from './Main/Main';
-import { VerifyCode } from './VerifyCode/VerifyCode';
+import { SignUp } from './SignUp/SignUp';
+import { ConfirmEmail } from './СonfirmEmail/ConfirmEmail';
 import { AlreadyClaimed } from './AlreadyClaimed/AlreadyClaimed';
 import { CampaignOver } from './CampaignOver/CampaignOver';
-import styles from './App.module.css';
+import css from './App.module.css';
 
 export const App = () => {
   const page = useStoreState((state) => state.navigation.page);
-  const isLoading = useStoreState((state) => state.isLoading.app);
+  const isLoading = useStoreState((state) => state.loading.app);
   const initApp = useStoreActions((actions) => actions.initApp);
 
   useEffect(() => {
     initApp();
   }, [initApp]);
 
-  if (isLoading) return null;
-
   return (
-    <div className={styles.container}>
+    <div className={css.container}>
       <Logo />
-      {page === pages.main && <Main />}
-      {page === pages.verifyCode && <VerifyCode />}
-      {page === pages.alreadyClaimed && <AlreadyClaimed />}
-      {page === pages.campaignOver && <CampaignOver />}
+      {isLoading ? null : (
+        <>
+          {page === pages.signup && <SignUp />}
+          {page === pages.confirmEmail && <ConfirmEmail />}
+          {page === pages.alreadyClaimed && <AlreadyClaimed />}
+          {page === pages.campaignOver && <CampaignOver />}
+        </>
+      )}
     </div>
   );
 };
