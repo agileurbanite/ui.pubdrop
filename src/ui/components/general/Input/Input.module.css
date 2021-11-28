@@ -16,3 +16,8 @@
 .input::placeholder {
   color: #cacaca;
 }
+
+.error {
+  min-height: 30px;
+  color: red;
+}
