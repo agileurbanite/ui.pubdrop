@@ -16,7 +16,7 @@ const initState = {
     confirmEmail: null,
   },
   navigation: {
-    page: pages.confirmEmail,
+    page: pages.signup,
   },
 };
 
