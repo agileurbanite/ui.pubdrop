@@ -6,11 +6,12 @@ const initState = {
   claimPublicKey: null,
   claimSecretKey: null,
   loading: {
-    app: false,
+    app: true,
     sendEmail: false,
     confirmEmail: false,
   },
   errors: {
+    app: null,
     sendEmail: null,
     confirmEmail: null,
   },
@@ -21,5 +22,5 @@ const initState = {
 
 export const persistInitState = persist(initState, {
   storage: 'localStorage',
-  allow: ['email', 'claimPublicKey', 'claimSecretKey'],
+  allow: ['claimPublicKey', 'claimSecretKey'],
 });

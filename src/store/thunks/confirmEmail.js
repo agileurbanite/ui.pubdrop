@@ -1,15 +1,7 @@
 import { thunk } from 'easy-peasy';
 import ky from 'ky';
 import { api } from '../../config/api';
-
-const {
-  REACT_APP_NEAR_WALLET: newWallet,
-  REACT_APP_CAMPAIGN_ID: campaignId,
-  REACT_APP_REDIRECT_TO: redirectTo,
-} = process.env;
-
-const getWalletUrl = (secretKey) =>
-  `${newWallet}/linkdrop/${campaignId}/${secretKey}?redirectUrl=${redirectTo}`;
+import { goToWalletClaimPage } from '../helpers/goToWalletClaimPage';
 
 const target = 'confirmEmail';
 
@@ -25,7 +17,7 @@ export const confirmEmail = thunk(async (actions, payload, helpers) => {
       .json();
 
     actions.setClaimKey({ publicKey, secretKey });
-    window.location.replace(getWalletUrl(secretKey));
+    goToWalletClaimPage(secretKey);
   } catch (err) {
     const error = await err.response?.json();
     actions.showError({ target, message: error?.error });
