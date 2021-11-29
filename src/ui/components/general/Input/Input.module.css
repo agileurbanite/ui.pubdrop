@@ -1,6 +1,7 @@
 .input {
   height: 48px;
-  width: 350px;
+  width: 90vw;
+  max-width: 360px;
   position: relative;
   display: inline-flex;
   border: 3px solid #a463b0;

@@ -5,6 +5,13 @@
   margin-top: 18vh;
   margin-bottom: 5vh;
 }
+@media (max-width: 650px) {
+  .container {
+    flex-direction: column;
+    margin-top: 50px;
+    margin-bottom: 10vh;
+  }
+}
 
 .nearText {
   height: 45px;
@@ -14,9 +21,14 @@
   height: 100px;
   margin: 0 70px;
 }
+@media (max-width: 650px) {
+  .nearIcon {
+    margin: 30px 0;
+  }
+}
 
 .miami {
   font-size: 62px;
-  line-height: 85px;
+  line-height: 62px;
   letter-spacing: 3.244px;
 }
