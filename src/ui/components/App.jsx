@@ -8,6 +8,7 @@ import { ConfirmEmail } from './СonfirmEmail/ConfirmEmail';
 import { AlreadyClaimed } from './AlreadyClaimed/AlreadyClaimed';
 import { CampaignOver } from './CampaignOver/CampaignOver';
 import { ErrorText } from './general/ErrorText/ErrorText';
+import { Footer } from './Footer/Footer';
 import css from './App.module.css';
 
 export const App = () => {
@@ -22,17 +23,20 @@ export const App = () => {
 
   return (
     <div className={css.container}>
-      <Logo />
-      {isLoading && <CircleLoader color="white" size={128} />}
-      {!isLoading && error && <ErrorText error={error} />}
-      {!isLoading && !error && (
-        <>
-          {page === pages.signup && <SignUp />}
-          {page === pages.confirmEmail && <ConfirmEmail />}
-          {page === pages.alreadyClaimed && <AlreadyClaimed />}
-          {page === pages.campaignOver && <CampaignOver />}
-        </>
-      )}
+      <div className={css.wrapper}>
+        <Logo />
+        {isLoading && <CircleLoader color="white" size={128} />}
+        {!isLoading && error && <ErrorText error={error} />}
+        {!isLoading && !error && (
+          <>
+            {page === pages.signup && <SignUp />}
+            {page === pages.confirmEmail && <ConfirmEmail />}
+            {page === pages.alreadyClaimed && <AlreadyClaimed />}
+            {page === pages.campaignOver && <CampaignOver />}
+          </>
+        )}
+      </div>
+      <Footer />
     </div>
   );
 };
