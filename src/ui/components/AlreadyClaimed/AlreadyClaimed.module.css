@@ -1,7 +1,13 @@
 .container {
+  grid-area: b;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (max-width: 650px) {
+  .container {
+    align-self: center;
+  }
 }
 
 .h1 {

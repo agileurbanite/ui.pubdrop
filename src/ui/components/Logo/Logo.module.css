@@ -1,34 +1,37 @@
 .container {
+  grid-area: a;
+  justify-self: center;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-top: 18vh;
   margin-bottom: 5vh;
 }
-@media (max-width: 650px) {
-  .container {
-    flex-direction: column;
-    margin-top: 20px;
-    margin-bottom: 25px;
-  }
-}
-
 .nearText {
   height: 45px;
 }
-
 .nearIcon {
   height: 100px;
   margin: 0 70px;
 }
-@media (max-width: 650px) {
-  .nearIcon {
-    margin: 20px 0;
-  }
+.miami {
+  height: 45px;
+  letter-spacing: 3.244px;
 }
 
-.miami {
-  font-size: 62px;
-  line-height: 62px;
-  letter-spacing: 3.244px;
+@media (max-width: 650px) {
+  .container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .nearText {
+    height: 28px;
+  }
+  .nearIcon {
+    height: 60px;
+    margin: 0 20px;
+  }
+  .miami {
+    height: 28px;
+  }
 }

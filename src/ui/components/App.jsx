@@ -23,19 +23,17 @@ export const App = () => {
 
   return (
     <div className={css.container}>
-      <div className={css.wrapper}>
-        <Logo />
-        {isLoading && <CircleLoader color="white" size={128} />}
-        {!isLoading && error && <ErrorText error={error} />}
-        {!isLoading && !error && (
-          <>
-            {page === pages.signup && <SignUp />}
-            {page === pages.confirmEmail && <ConfirmEmail />}
-            {page === pages.alreadyClaimed && <AlreadyClaimed />}
-            {page === pages.campaignOver && <CampaignOver />}
-          </>
-        )}
-      </div>
+      <Logo />
+      {isLoading && <CircleLoader color="white" size={128} />}
+      {!isLoading && error && <ErrorText error={error} />}
+      {!isLoading && !error && (
+        <>
+          {page === pages.signup && <SignUp />}
+          {page === pages.confirmEmail && <ConfirmEmail />}
+          {page === pages.alreadyClaimed && <AlreadyClaimed />}
+          {page === pages.campaignOver && <CampaignOver />}
+        </>
+      )}
       <Footer />
     </div>
   );
