@@ -1,9 +1,8 @@
 .error {
   width: 90vw;
-  max-width: 400px;
-  font-size: 18px;
+  max-width: 360px;
+  font-size: 14px;
   text-align: center;
   color: #ff2828;
-  box-shadow: 0 0 20px 10px #0000009c;
-  background-color: #00000085;
+  margin: 10px 0 0;
 }

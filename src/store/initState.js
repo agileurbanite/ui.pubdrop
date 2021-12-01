@@ -6,13 +6,13 @@ const initState = {
   claimPublicKey: null,
   claimSecretKey: null,
   loading: {
-    app: true,
+    app: false,
     sendEmail: false,
     confirmEmail: false,
   },
   errors: {
     app: null,
-    sendEmail: null,
+    // sendEmail: 'An email with a confirmation code was not sent. Please try again later',
     confirmEmail: null,
   },
   navigation: {

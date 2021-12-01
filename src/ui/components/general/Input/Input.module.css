@@ -19,6 +19,8 @@
 }
 
 .error {
-  min-height: 30px;
   color: red;
+  font-size: 14px;
+  text-shadow: 0 0 5px black;
+  margin-top: 4px;
 }

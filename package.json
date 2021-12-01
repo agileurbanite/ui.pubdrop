@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": false,
   "dependencies": {
+    "@emotion/react": "^11.7.0",
+    "@emotion/styled": "^11.6.0",
     "@hookform/resolvers": "^2.8.3",
+    "@mui/material": "^5.2.2",
     "classnames": "^2.3.1",
     "easy-peasy": "^5.0.4",
     "ky": "^0.28.7",
