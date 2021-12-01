@@ -24,7 +24,11 @@ export const App = () => {
   return (
     <div className={css.container}>
       <Logo />
-      {isLoading && <CircleLoader color="white" size={128} />}
+      {isLoading && (
+        <div className={css.loader}>
+          <CircleLoader color="white" size={128} />
+        </div>
+      )}
       {!isLoading && error && <ErrorText error={error} />}
       {!isLoading && !error && (
         <>
