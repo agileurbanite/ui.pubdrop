@@ -6,6 +6,11 @@
   padding: 40px 20px;
   border-radius: 20px;
 }
+@media (max-width: 650px) {
+  .container {
+    padding: 20px 10px;
+  }
+}
 
 .h1 {
   font-size: 30px;
@@ -25,7 +30,8 @@
 
 .label {
   display: flex;
-  width: 360px;
+  width: 90vw;
+  max-width: 360px;
   margin-top: 10px;
 }
 

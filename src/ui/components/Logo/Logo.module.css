@@ -8,8 +8,8 @@
 @media (max-width: 650px) {
   .container {
     flex-direction: column;
-    margin-top: 50px;
-    margin-bottom: 10vh;
+    margin-top: 20px;
+    margin-bottom: 25px;
   }
 }
 
@@ -23,7 +23,7 @@
 }
 @media (max-width: 650px) {
   .nearIcon {
-    margin: 30px 0;
+    margin: 20px 0;
   }
 }
 

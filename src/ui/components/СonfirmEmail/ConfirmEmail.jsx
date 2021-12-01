@@ -4,7 +4,7 @@ import { Button } from '../general/Button/Button';
 import { ErrorText } from '../general/ErrorText/ErrorText';
 import { Input } from '../general/Input/Input';
 import { resolver } from './validations';
-import styles from './ConfirmEmail.module.css';
+import css from './ConfirmEmail.module.css';
 
 export const ConfirmEmail = () => {
   const isLoading = useStoreState((state) => state.loading.confirmEmail);
@@ -17,16 +17,16 @@ export const ConfirmEmail = () => {
   const onSubmit = handleSubmit(verifyCode);
 
   return (
-    <div className={styles.container}>
-      <h1 className={styles.h1}>Almost there</h1>
-      <h2 className={styles.h2}>Verify your email</h2>
+    <div className={css.container}>
+      <h1 className={css.h1}>Almost there</h1>
+      <h2 className={css.h2}>Verify your email</h2>
       <Input
         placeholder="Enter the verification code"
         register={register}
         name="confirmationCode"
         error={errors.confirmationCode}
       />
-      <Button text="Submit" onClick={onSubmit} isLoading={isLoading} />
+      <Button text="Submit" onClick={onSubmit} isLoading={isLoading} className={css.button}/>
       <ErrorText error={error} />
     </div>
   );

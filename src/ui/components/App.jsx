@@ -17,9 +17,9 @@ export const App = () => {
   const error = useStoreState((state) => state.errors.app);
   const initApp = useStoreActions((actions) => actions.initApp);
 
-  // useEffect(() => {
-  //   initApp();
-  // }, [initApp]);
+  useEffect(() => {
+    initApp();
+  }, [initApp]);
 
   return (
     <div className={css.container}>
