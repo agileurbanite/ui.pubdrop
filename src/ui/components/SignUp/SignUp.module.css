@@ -40,12 +40,9 @@
   border: none;
   padding: 0;
   font-size: 14px;
+  outline: none;
 }
 
 .checkbox {
-  color: #a463b0;
-}
-
-.checkbox:checked {
-  color: #a463b0;
+  color: #a463b0!important; /* TODO  Fix this*/
 }

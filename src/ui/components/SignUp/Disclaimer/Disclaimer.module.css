@@ -1,0 +1,24 @@
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+}
+
+.container {
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  outline: none;
+  background: rgb(58,36,65);
+  background: linear-gradient(180deg, rgba(58,36,65,1) 40%, rgba(22,41,25,1) 100%);
+}
+
+.button {
+  color: white;
+}
