@@ -13,7 +13,10 @@ export const confirmEmail = thunk(async (actions, payload, helpers) => {
     actions.enableLoading({ target });
 
     const { publicKey, secretKey } = await ky
-      .post(api.confirmEmail, { json: { email, confirmationCode: Number(confirmationCode) } })
+      .post(api.confirmEmail, {
+        json: { email, confirmationCode: Number(confirmationCode) },
+        searchParams: { event: process.env.REACT_APP_EVENT },
+      })
       .json();
 
     actions.setClaimKey({ publicKey, secretKey });

@@ -1,9 +1,10 @@
 import { Button } from '../general/Button/Button';
+import { redirects } from '../../../config/redirects';
 import css from './AlreadyClaimed.module.css';
 
 export const AlreadyClaimed = () => {
   const goToNear = () => {
-    window.location.assign(process.env.REACT_APP_LEARD_ABOUT_NEAR);
+    window.location.assign(redirects.learnMore);
   };
 
   return (
