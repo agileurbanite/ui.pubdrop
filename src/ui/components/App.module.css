@@ -7,28 +7,38 @@
   grid-template-areas:
     'a'
     'b'
-    'c'
-  ;
-
-  background-image: url(../images/background-2005-1388.jpg);
+    'c';
   background-size: auto;
   background-repeat: no-repeat;
   background-position: center;
 }
-@media (max-width: 650px) {
-  .container {
-    background-size: auto 100%;
-  }
+.miami {
+  background-image: url(../images/miami/background-2005-1388.jpg);
 }
-@media (min-width: 1920px) {
-  .container {
-    background-image: url(../images/background-3343-2234.jpg);
-    background-size: 100% 100%;
-  }
+.newYork {
+  background-image: url(../images/newYork/background-2005-1388.jpg);
 }
 
 .loader {
   grid-area: b;
   display: flex;
   justify-content: center;
+}
+
+@media (max-width: 650px) {
+  .container {
+    background-size: auto 100%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .container {
+    background-size: 100% 100%;
+  }
+  .miami {
+    background-image: url(../images/miami/background-3343-2234.jpg);
+  }
+  .newYork {
+    background-image: url(../images/newYork/background-3343-2234.jpg);
+  }
 }

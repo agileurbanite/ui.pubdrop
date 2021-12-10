@@ -1,9 +1,10 @@
+import { redirects } from '../../../config/redirects';
 import { Button } from '../general/Button/Button';
 import css from './CampaignOver.module.css';
 
 export const CampaignOver = () => {
   const goToNear = () => {
-    window.location.assign(process.env.REACT_APP_LEARD_ABOUT_NEAR);
+    window.location.assign(redirects.learnMore);
   };
 
   return (

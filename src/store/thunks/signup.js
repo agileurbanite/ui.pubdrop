@@ -12,7 +12,13 @@ export const signup = thunk(async (actions, payload) => {
 
     actions.enableLoading({ target });
 
-    const response = await ky.post(api.signup, { json: { email } }).json();
+    const response = await ky
+      .post(api.signup, {
+        json: { email },
+        searchParams: { event: process.env.REACT_APP_EVENT },
+      })
+      .json();
+
     actions.setEmail({ email });
 
     // If user confirmed email on another device but hasn't claimed it - redirect to wallet
