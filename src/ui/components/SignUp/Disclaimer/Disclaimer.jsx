@@ -1,4 +1,5 @@
 import { Modal, Button } from '@mui/material';
+import { event } from '../../../../config/event';
 import css from './Disclaimer.module.css';
 
 export const Disclaimer = ({ open, onClose }) => (
@@ -20,11 +21,13 @@ export const Disclaimer = ({ open, onClose }) => (
       </p>
       <p>
         WE RECOMMEND YOU CONSULT LEGAL, FINANCIAL, TAX AND OTHER PROFESSIONAL ADVISORS OR EXPERTS
-        FOR FURTHER GUIDANCE BEFORE PARTICIPATING IN NEARDROP AT miami.neardrop.io. YOU ARE STRONGLY
+        FOR FURTHER GUIDANCE BEFORE PARTICIPATING IN NEARDROP AT {event.mainUrl}. YOU ARE STRONGLY
         ADVISED TO TAKE INDEPENDENT LEGAL ADVICE IN RESPECT OF THE LEGALITY IN YOUR JURISDICTION OF
         ANY PARTICIPATION IN THE NEARDROP.
       </p>
-      <Button className={css.button} onClick={onClose}>Got it</Button>
+      <Button className={css.button} onClick={onClose}>
+        Got it
+      </Button>
     </div>
   </Modal>
 );

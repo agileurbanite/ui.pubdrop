@@ -1,6 +1,7 @@
 import { useStoreActions, useStoreState } from 'easy-peasy';
 import CircleLoader from 'react-spinners/CircleLoader';
 import { useEffect } from 'react';
+import cn from 'classnames';
 import { pages } from '../../config/pages';
 import { Logo } from './Logo/Logo';
 import { SignUp } from './SignUp/SignUp';
@@ -9,6 +10,7 @@ import { AlreadyClaimed } from './AlreadyClaimed/AlreadyClaimed';
 import { CampaignOver } from './CampaignOver/CampaignOver';
 import { ErrorText } from './general/ErrorText/ErrorText';
 import { Footer } from './Footer/Footer';
+import { event } from '../../config/event';
 import css from './App.module.css';
 
 export const App = () => {
@@ -22,7 +24,7 @@ export const App = () => {
   }, [initApp]);
 
   return (
-    <div className={css.container}>
+    <div className={cn(css.container, css[event.name])}>
       <Logo />
       {isLoading && (
         <div className={css.loader}>
