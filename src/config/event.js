@@ -1,5 +1,5 @@
 import mLogoText from '../ui/images/miami/miami-text.svg';
-import nyLogoText from '../ui/images/newYork/new-york-text.svg';
+import nyLogoText from '../ui/images/newYork/nyc.svg';
 
 const events = {
   miami: {
@@ -10,7 +10,7 @@ const events = {
   },
   newYork: {
     name: 'newYork',
-    pageTitle: 'NEAR New York',
+    pageTitle: 'NEAR NYC',
     logoText: nyLogoText,
     mainUrl: 'nyc.near.org',
   },
