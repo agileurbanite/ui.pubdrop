@@ -18,6 +18,9 @@
 .newYork {
   background-image: url(../images/newYork/background-2005-1388.jpg);
 }
+.sf {
+  background-image: url(../images/sf/background-2005-1388.jpg);
+}
 
 .loader {
   grid-area: b;
@@ -40,5 +43,8 @@
   }
   .newYork {
     background-image: url(../images/newYork/background-3343-2234.jpg);
+  }
+  .sf {
+    background-image: url(../images/sf/background-3343-2234.jpg);
   }
 }
