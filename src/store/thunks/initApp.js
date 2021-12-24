@@ -4,13 +4,10 @@ import { api } from '../../config/api';
 import { pages } from '../../config/pages';
 import { goToWalletClaimPage } from '../helpers/goToWalletClaimPage';
 import { store } from '../index';
-import { event } from '../../config/event';
 
 export const initApp = thunk(async (actions) => {
   await store.persist.resolveRehydration();
   const { claimPublicKey, claimSecretKey } = store.getState();
-
-  window.document.title = event.pageTitle;
 
   try {
     const campaignStatus = await ky

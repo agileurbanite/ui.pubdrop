@@ -2,50 +2,43 @@
   grid-area: a;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 200px 1fr;
-  grid-template-rows: auto;
-  grid-template-areas: 'a b c';
-  margin-top: 18vh;
-  margin-bottom: 5vh;
+  grid-template-columns: auto;
+  grid-template-rows: 70px 110px 70px;
+  grid-template-areas:
+      'a'
+      'b'
+      'c';
+  margin-top: 5vh;
+  margin-bottom: 10vh;
 }
 .nearText {
   height: 45px;
-  justify-self: end;
-  align-self: center;
+  justify-self: center;
+  align-self: start;
 }
 .nearIcon {
   height: 100px;
   justify-self: center;
 }
 .eventName {
-  justify-self: start;
-  align-self: center;
-  height: 45px;
-  letter-spacing: 3.244px;
+  justify-self: center;
+  align-self: end;
+  height: 50px;
 }
 
 @media (max-width: 650px) {
   .container {
-    grid-template-columns: auto;
     grid-template-rows: 50px 60px 50px;
-    grid-template-areas:
-      'a'
-      'b'
-      'c';
     margin-top: 30px;
     margin-bottom: 30px;
   }
   .nearText {
     height: 28px;
-    justify-self: center;
-    align-self: start;
   }
   .nearIcon {
     height: 60px;
   }
   .eventName {
     height: 28px;
-    justify-self: center;
-    align-self: end;
   }
 }
