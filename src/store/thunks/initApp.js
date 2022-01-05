@@ -24,11 +24,15 @@ export const initApp = thunk(async (actions) => {
       })
       .json();
 
-    if (keyStatus.isActive) {
-      goToWalletClaimPage(claimSecretKey);
-    } else {
-      actions.toPage({ page: pages.alreadyClaimed });
+    if(claimPublicKey && !keyStatus.isActive){
+      actions.showMessage({message: 'All set, you will soon receive an e-mail with a gift.'});
+      return;
     }
+    if (keyStatus.isActive) {
+       // goToWalletClaimPage(claimSecretKey);/* TODO: Temporarily blocked*/
+      } else {
+        actions.toPage({ page: pages.alreadyClaimed });
+      }
   } catch (e) {
     actions.showError({ target: 'app', message: 'Fail to load application. Please try later' });
   } finally {

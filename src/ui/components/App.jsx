@@ -12,11 +12,13 @@ import { ErrorText } from './general/ErrorText/ErrorText';
 import { Footer } from './Footer/Footer';
 import { event } from '../../config/event';
 import css from './App.module.css';
+import { MessageText } from './general/MessageText/MessageText';
 
 export const App = () => {
   const page = useStoreState((state) => state.navigation.page);
   const isLoading = useStoreState((state) => state.loading.app);
   const error = useStoreState((state) => state.errors.app);
+  const message = useStoreState((state) => state.messages);
   const initApp = useStoreActions((actions) => actions.initApp);
 
   useEffect(() => {
@@ -40,6 +42,7 @@ export const App = () => {
           {page === pages.campaignOver && <CampaignOver />}
         </>
       )}
+      <MessageText message={message} />
       <Footer />
     </div>
   );

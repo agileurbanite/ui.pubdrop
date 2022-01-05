@@ -24,7 +24,8 @@ export const signup = thunk(async (actions, payload) => {
     // If user confirmed email on another device but hasn't claimed it - redirect to wallet
     if (response.secretKey) {
       actions.setClaimKey(response);
-      return goToWalletClaimPage(response.secretKey);
+     // return goToWalletClaimPage(response.secretKey); /* TODO: Temporarily blocked*/
+      actions.showMessage({message: 'All set, you will soon receive an e-mail with a gift.'});
     }
 
     actions.toPage({ page: pages.confirmEmail });

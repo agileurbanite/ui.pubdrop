@@ -20,10 +20,13 @@ export const confirmEmail = thunk(async (actions, payload, helpers) => {
       .json();
 
     actions.setClaimKey({ publicKey, secretKey });
-    goToWalletClaimPage(secretKey);
+    //goToWalletClaimPage(secretKey); TODO: Temporarily blocked
+    actions.showMessage({message: 'All set, you will soon receive an e-mail with a gift.'});
   } catch (err) {
     const error = await err.response?.json();
     actions.showError({ target, message: error?.error });
+    actions.disableLoading({ target });
+  } finally {
     actions.disableLoading({ target });
   }
 });

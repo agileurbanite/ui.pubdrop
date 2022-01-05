@@ -15,6 +15,7 @@ const initState = {
     sendEmail: null,
     confirmEmail: null,
   },
+  messages: "",
   navigation: {
     page: pages.signup,
   },
