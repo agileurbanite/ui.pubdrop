@@ -2,12 +2,12 @@ import { thunk } from 'easy-peasy';
 import ky from 'ky';
 import { api } from '../../config/api';
 import { pages } from '../../config/pages';
-import { goToWalletClaimPage } from '../helpers/goToWalletClaimPage';
 import { store } from '../index';
 
 export const initApp = thunk(async (actions) => {
   await store.persist.resolveRehydration();
-  const { claimPublicKey, claimSecretKey } = store.getState();
+  //const { claimPublicKey, claimSecretKey } = store.getState();
+  const { claimPublicKey } = store.getState();
 
   try {
     const campaignStatus = await ky

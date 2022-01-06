@@ -2,7 +2,6 @@ import { thunk } from 'easy-peasy';
 import ky from 'ky';
 import { pages } from '../../config/pages';
 import { api } from '../../config/api';
-import { goToWalletClaimPage } from '../helpers/goToWalletClaimPage';
 
 const target = 'sendEmail';
 
