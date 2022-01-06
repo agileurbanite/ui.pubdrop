@@ -1,7 +1,6 @@
 import { thunk } from 'easy-peasy';
 import ky from 'ky';
 import { api } from '../../config/api';
-import { goToWalletClaimPage } from '../helpers/goToWalletClaimPage';
 
 const target = 'confirmEmail';
 
