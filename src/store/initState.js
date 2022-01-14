@@ -3,19 +3,25 @@ import { pages } from '../config/pages';
 
 const initState = {
   email: null,
+  phone: null,
   claimPublicKey: null,
   claimSecretKey: null,
+  confirmMethod: 'phone',
   loading: {
     app: true,
     sendEmail: false,
     confirmEmail: false,
+    sendPhoneNumber: false,
+    confirmPhoneNumber: false,
   },
   errors: {
     app: null,
     sendEmail: null,
     confirmEmail: null,
+    sendPhoneNumber: null,
+    confirmPhoneNumber: null,
   },
-  messages: "",
+  messages: '',
   navigation: {
     page: pages.signup,
   },

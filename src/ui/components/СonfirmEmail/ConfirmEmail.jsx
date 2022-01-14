@@ -3,7 +3,7 @@ import { useForm } from 'react-hook-form';
 import { Button } from '../general/Button/Button';
 import { ErrorText } from '../general/ErrorText/ErrorText';
 import { Input } from '../general/Input/Input';
-import { resolver } from './validations';
+import { resolver } from '../validations/validations';
 import css from './ConfirmEmail.module.css';
 
 export const ConfirmEmail = () => {

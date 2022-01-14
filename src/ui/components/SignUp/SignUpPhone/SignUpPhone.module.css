@@ -1,0 +1,42 @@
+.wrapper{
+  height: 48px;
+  width: 90vw;
+  max-width: 360px;
+  position: relative;
+  display: flex;
+  border: 3px solid #a463b0;
+  border-radius: 25px;
+  outline: none;
+  background-color: #000000bf;
+}
+
+.select{
+  border: 0;
+  border-radius: 25px;
+  outline: none;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  background-color: #000000bf;
+  box-sizing: border-box;
+}
+
+.input {
+  height: 48px;
+  width: 90vw;
+  max-width: 360px;
+  position: relative;
+  display: flex;
+  border: 3px solid #a463b0;
+  border-radius: 25px;
+  outline: none;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  background-color: #000000bf;
+  box-sizing: border-box;
+}
+.label {
+  display: flex;
+  justify-content: center;
+}

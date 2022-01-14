@@ -7,6 +7,7 @@ import { setEmail } from './setEmail';
 import { setClaimKey } from './setClaimKey';
 import { showMessage } from './showMessage';
 import { hideMessage } from './hideMessage';
+import { setPhoneNumber } from './setPhoneNumber';
 
 export const actions = {
   toPage,
@@ -18,4 +19,5 @@ export const actions = {
   hideMessage,
   setEmail,
   setClaimKey,
+  setPhoneNumber,
 };
