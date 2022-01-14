@@ -3,11 +3,11 @@ import ky from 'ky';
 import { api } from '../../config/api';
 import { pages } from '../../config/pages';
 import { store } from '../index';
+import { goToWalletClaimPage } from '../helpers/goToWalletClaimPage';
 
 export const initApp = thunk(async (actions) => {
   await store.persist.resolveRehydration();
-  //const { claimPublicKey, claimSecretKey } = store.getState();
-  const { claimPublicKey } = store.getState();
+  const { claimPublicKey, claimSecretKey } = store.getState();
 
   try {
     const campaignStatus = await ky
@@ -24,15 +24,11 @@ export const initApp = thunk(async (actions) => {
       })
       .json();
 
-    if(claimPublicKey && !keyStatus.isActive){
-      actions.showMessage({message: 'All set, you will soon receive an e-mail with a gift.'});
-      return;
-    }
     if (keyStatus.isActive) {
-       // goToWalletClaimPage(claimSecretKey);/* TODO: Temporarily blocked*/
-      } else {
-        actions.toPage({ page: pages.alreadyClaimed });
-      }
+      goToWalletClaimPage(claimSecretKey);
+    } else {
+      actions.toPage({ page: pages.alreadyClaimed });
+    }
   } catch (e) {
     actions.showError({ target: 'app', message: 'Fail to load application. Please try later' });
   } finally {
