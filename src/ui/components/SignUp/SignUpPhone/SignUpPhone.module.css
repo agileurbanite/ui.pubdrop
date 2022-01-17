@@ -19,6 +19,29 @@
   color: white;
   background-color: #000000bf;
   box-sizing: border-box;
+  text-align-last: center;
+  -moz-text-align-last: center;
+  position: absolute;
+  appearance: none;
+  -webkit-appearance: none;
+  height: 100%;
+  max-width: 95%;
+  padding: 0 25px;
+}
+
+.arrow {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 1.5em;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  vertical-align: text-bottom;
+  pointer-events: none;
+  color: white;
+  font-weight: bold;
 }
 
 .input {

@@ -48,6 +48,7 @@ const SignUpPhone = () => {
             </option>
           ))}
         </select>
+        <span className={classes.arrow}>▼</span>
       </div>
     </>
   );
