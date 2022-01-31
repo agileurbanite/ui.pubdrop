@@ -18,13 +18,15 @@ import { reCaptchaExecute } from 'recaptcha-v3-react-function-async';
 import cn from 'classnames';
 import { event } from '../../../../config/event';
 
+const DEF_COUNTRY = process.env.REACT_APP_DEF_COUNTRY || 'US';
+
 const SignUpPhone = () => {
   const isLoading = useStoreState((state) => state.loading.sendPhoneNumber);
   const error = useStoreState((state) => state.errors.sendPhoneNumber);
   const signup = useStoreActions((actions) => actions.signup);
   const [isOpen, setOpen] = useState(false);
   const anchorEl = useRef();
-  const [country, setCountry] = useState('CN');
+  const [country, setCountry] = useState(DEF_COUNTRY);
   const methods = useForm({ resolver });
   const { handleSubmit, watch, register, control, reset, setValue } = methods;
   const { errors } = methods.formState;
