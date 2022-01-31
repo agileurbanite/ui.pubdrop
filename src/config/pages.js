@@ -3,6 +3,5 @@ export const pages = {
   alreadyClaimed: 'already-claimed',
   campaignOver: 'campaign-over',
   confirmEmail: 'confirm-email',
-  confirmPhoneNumber: 'confirm-phone-number'
-
+  confirmPhoneNumber: 'confirm-phone-number',
 };

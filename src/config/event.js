@@ -1,6 +1,7 @@
 import miami from '../ui/images/miami/miami.svg';
 import nyc from '../ui/images/newYork/nyc.svg';
 import sanFrancisco from '../ui/images/sf/san-francisco.svg';
+import hongbao from '../ui/images/hongbao/hongbao.svg';
 
 const events = {
   miami: {
@@ -17,6 +18,11 @@ const events = {
     name: 'sf',
     logoText: sanFrancisco,
     mainUrl: 'sf.near.org',
+  },
+  hongbao: {
+    name: 'hongbao',
+    logoText: hongbao,
+    mainUrl: 'hongbao.near.org',
   },
 };
 

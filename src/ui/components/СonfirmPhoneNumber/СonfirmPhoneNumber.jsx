@@ -5,6 +5,9 @@ import { ErrorText } from '../general/ErrorText/ErrorText';
 import { useStoreActions, useStoreState } from 'easy-peasy';
 import { useForm } from 'react-hook-form';
 import { resolver } from '../validations/validations';
+import { event } from '../../../config/event';
+import nearIcon from '../../images/hongbao/near-logo.png';
+import cn from 'classnames';
 
 const ConfirmPhoneNumber = () => {
   const isLoading = useStoreState((state) => state.loading.confirmPhoneNumber);
@@ -17,9 +20,16 @@ const ConfirmPhoneNumber = () => {
   const onSubmit = handleSubmit(verifyCode);
 
   return (
-    <div className={css.container}>
-      <h1 className={css.h1}>Almost there</h1>
-      <h2 className={css.h2}>Verify your phone number</h2>
+    <div className={cn(css.container, css[event.name])}>
+      {event.name === 'hongbao' && (
+        <div className={css.headerWrapper}>
+          <div className={css.header}>
+            <img src={nearIcon} className={css.logo} alt="NEAR logo" />
+          </div>
+        </div>
+      )}
+      <h1 className={cn(css.h1, css[event.name])}>Almost there</h1>
+      <h2 className={cn(css.h2, css[event.name])}>Verify your phone number</h2>
       <Input
         placeholder="Enter the verification code"
         register={register}

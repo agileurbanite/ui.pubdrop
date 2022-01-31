@@ -13,7 +13,6 @@ export const initApp = thunk(async (actions) => {
     const campaignStatus = await ky
       .get(api.campaignStatus, { searchParams: { event: process.env.REACT_APP_EVENT } })
       .json();
-
     if (!campaignStatus.isActive) return actions.toPage({ page: pages.campaignOver });
     // If there is no key in Local Storage that's means it is a first launch or email wasn't confirmed
     if (!claimPublicKey) return;
