@@ -11,6 +11,13 @@
   margin-top: 5vh;
   margin-bottom: 10vh;
 }
+.container.hongbao {
+  grid-template-areas:
+          'a'
+          'b';
+  grid-template-rows: 70px;
+  margin-bottom: 5vh;
+}
 .nearText {
   height: 45px;
   justify-self: center;
@@ -18,6 +25,11 @@
 }
 .nearIcon {
   height: 100px;
+  justify-self: center;
+}
+.hongbaoIcon {
+  width: 130px;
+  height: 85px;
   justify-self: center;
 }
 .eventName {
@@ -35,10 +47,16 @@
   .nearText {
     height: 28px;
   }
+  .nearText.hongbao {
+    height: 46px;
+  }
   .nearIcon {
     height: 60px;
   }
   .eventName {
     height: 28px;
+  }
+  .eventName.hongbao {
+    height: 100%;
   }
 }

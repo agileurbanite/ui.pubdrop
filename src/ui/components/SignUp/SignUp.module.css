@@ -4,10 +4,45 @@
   flex-direction: column;
   align-items: center;
   background-color: rgb(33 21 39 / 75%);
-  padding: 40px 20px;
   border-radius: 20px;
+  padding: 40px 20px;
   justify-self: center;
   align-self: baseline;
+}
+
+.container.hongbao {
+  background: linear-gradient(169.23deg, #DB5555 1.26%, #C1262E 92.01%);
+  box-shadow: 0px 2px 20px 0px #00000080;
+  position: relative;
+  max-width: 360px;
+}
+.contentWrapper{
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.headerWrapper{
+  height: 196px;
+}
+.header {
+  background-image: url(../../images/hongbao/header.png);
+  background-size: cover;
+  height: 144px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.logo {
+  width: 144px;
+  height: 144px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .grecaptcha-badge {
@@ -28,7 +63,9 @@
   text-shadow: 0 2px 10px #000000;
   text-align: center;
 }
-
+.h1.hongbao{
+  text-shadow: none;
+}
 .h2 {
   font-size: 24px;
   font-weight: 500;
@@ -36,7 +73,9 @@
   text-shadow: 0 2px 10px #000000;
   text-align: center;
 }
-
+.h2.hongbao{
+  text-shadow: none;
+}
 .label {
   display: flex;
   width: 90vw;
@@ -61,3 +100,8 @@
 .checkbox {
   color: #a463b0!important; /* TODO  Fix this*/
 }
+
+.checkbox.hongbao {
+  color: #f2b05d!important;
+}
+

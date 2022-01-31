@@ -15,6 +15,8 @@ import metadata from 'libphonenumber-js/metadata.min.json';
 import 'react-phone-number-input/style.css';
 import en from 'react-phone-number-input/locale/en.json';
 import { reCaptchaExecute } from 'recaptcha-v3-react-function-async';
+import cn from 'classnames';
+import { event } from '../../../../config/event';
 
 const SignUpPhone = () => {
   const isLoading = useStoreState((state) => state.loading.sendPhoneNumber);
@@ -22,7 +24,7 @@ const SignUpPhone = () => {
   const signup = useStoreActions((actions) => actions.signup);
   const [isOpen, setOpen] = useState(false);
   const anchorEl = useRef();
-  const [country, setCountry] = useState('US');
+  const [country, setCountry] = useState('CN');
   const methods = useForm({ resolver });
   const { handleSubmit, watch, register, control, reset, setValue } = methods;
   const { errors } = methods.formState;
@@ -40,8 +42,13 @@ const SignUpPhone = () => {
       <label className={classes.label}>
         <p>Choose country</p>
       </label>
-      <div className={classes.wrapper}>
-        <select name={name} className={classes.select} value={country} onChange={handleCountry}>
+      <div className={cn(classes.wrapper, classes[event.name])}>
+        <select
+          name={name}
+          className={cn(classes.select, classes[event.name])}
+          value={country}
+          onChange={handleCountry}
+        >
           {getCountries().map((country) => (
             <option key={country} value={country}>
               {labels[country]} +{getCountryCallingCode(country)}
@@ -80,7 +87,7 @@ const SignUpPhone = () => {
         render={({ field: { onChange, value } }) => (
           <PhoneInput
             defaultCountry={country}
-            className={classes.input}
+            className={cn(classes.input, classes[event.name])}
             value={value}
             metadata={metadata}
             placeholder="Enter your phone number"
@@ -90,9 +97,11 @@ const SignUpPhone = () => {
         control={control}
         name="phone"
       />
-      {errors['phone'] && <div className={style.error}>{errors['phone'].message}</div>}
+      {errors['phone'] && (
+        <div className={cn(style.error, style[event.name])}>{errors['phone'].message}</div>
+      )}
       <div className={css.label}>
-        <Checkbox {...register('disclaimer')} className={css.checkbox} />
+        <Checkbox {...register('disclaimer')} className={cn(css.checkbox, css[event.name])} />
         <span className={css.labelText}>
           I have read, understood and subscribe to the{' '}
           <button className={css.disclaimer} ref={anchorEl} onClick={openDisclaimer}>

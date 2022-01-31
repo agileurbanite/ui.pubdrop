@@ -12,11 +12,21 @@
   font-weight: 500;
   margin-top: 10px;
 }
+.button.hongbao{
+  color: #C1262E;
+  font-size: 24px;
+  background: linear-gradient(180deg, #FFC860 0%, #E3935B 100%);
+  box-shadow: 0px 0px 10px 0px #00000040;
+}
 .button > span {
   margin-right: 4px;
 }
 
 .button:disabled {
   background: #757575;
+  box-shadow: none;
+}
+.button.hongbao:disabled {
+  background: #e4945b;
   box-shadow: none;
 }
