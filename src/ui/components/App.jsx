@@ -28,11 +28,13 @@ export const App = () => {
   }, [initApp]);
 
   useEffect(() => {
-    loadReCaptcha(process.env.REACT_APP_CAPTCHA_KEY)
-      .then()
-      .catch((e) => {
-        console.error('Error when load ReCaptcha', e);
-      });
+    if (event.name !== 'hongbao') {
+      loadReCaptcha(process.env.REACT_APP_CAPTCHA_KEY)
+        .then()
+        .catch((e) => {
+          console.error('Error when load ReCaptcha', e);
+        });
+    }
   }, []);
 
   return (

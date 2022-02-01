@@ -17,6 +17,7 @@ import en from 'react-phone-number-input/locale/en.json';
 import { reCaptchaExecute } from 'recaptcha-v3-react-function-async';
 import cn from 'classnames';
 import { event } from '../../../../config/event';
+import ReCaptchaV2 from 'react-google-recaptcha';
 
 const DEF_COUNTRY = process.env.REACT_APP_DEF_COUNTRY || 'US';
 
@@ -75,9 +76,25 @@ const SignUpPhone = () => {
 
   const handleSignUp = async (e) => {
     e.preventDefault();
+    if (event.name !== 'hongbao') {
+      await signUpV3captchaToken();
+    } else {
+      signUpV2captchaToken();
+    }
+  };
+
+  const signUpV3captchaToken = async () => {
     const gtoken = await reCaptchaExecute(process.env.REACT_APP_CAPTCHA_KEY, 'homepage');
     onVerifyCaptcha(gtoken);
     onSubmit();
+  };
+
+  const signUpV2captchaToken = () => {
+    onSubmit();
+  };
+
+  const handleCaptchaToken = (token) => {
+    onVerifyCaptcha(token);
   };
 
   return (
@@ -101,6 +118,11 @@ const SignUpPhone = () => {
       />
       {errors['phone'] && (
         <div className={cn(style.error, style[event.name])}>{errors['phone'].message}</div>
+      )}
+      {event.name === 'hongbao' && (
+        <div style={{ marginTop: '16px' }}>
+          <ReCaptchaV2 sitekey={process.env.REACT_APP_CAPTCHA_KEY} onChange={handleCaptchaToken} />
+        </div>
       )}
       <div className={css.label}>
         <Checkbox {...register('disclaimer')} className={cn(css.checkbox, css[event.name])} />
