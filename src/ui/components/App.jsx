@@ -14,7 +14,7 @@ import { event } from '../../config/event';
 import css from './App.module.css';
 import { MessageText } from './general/MessageText/MessageText';
 import ConfirmPhoneNumber from './СonfirmPhoneNumber/СonfirmPhoneNumber';
-import { loadReCaptcha } from 'recaptcha-v3-react-function-async';
+//import { loadReCaptcha } from 'recaptcha-v3-react-function-async';
 
 export const App = () => {
   const page = useStoreState((state) => state.navigation.page);
@@ -27,15 +27,15 @@ export const App = () => {
     initApp();
   }, [initApp]);
 
+  /*
   useEffect(() => {
-    if (event.name !== 'hongbao') {
       loadReCaptcha(process.env.REACT_APP_CAPTCHA_KEY)
-        .then()
-        .catch((e) => {
-          console.error('Error when load ReCaptcha', e);
-        });
-    }
+      .then()
+      .catch((e) => {
+        console.error('Error when load ReCaptcha', e);
+      });
   }, []);
+TODO: uncomment when returning to recaptchav3 */
 
   return (
     <div className={cn(css.container, css[event.name])}>
