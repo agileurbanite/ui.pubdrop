@@ -14,7 +14,7 @@ export const signup = thunk(async (actions, payload) => {
 
       const response = await ky
         .post(api.signup, {
-          json: { email },
+          json: { email, 'g-recaptcha-response': gToken },
           searchParams: { event: process.env.REACT_APP_EVENT },
         })
         .json();

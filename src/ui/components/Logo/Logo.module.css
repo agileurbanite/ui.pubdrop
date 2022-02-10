@@ -11,6 +11,12 @@
   margin-top: 5vh;
   margin-bottom: 10vh;
 }
+.container.ethdenver {
+  grid-template-rows: 252px;
+  grid-template-areas:
+          'a';
+  margin-bottom: 5vh;
+}
 .container.hongbao {
   grid-template-areas:
           'a'
@@ -26,6 +32,10 @@
 .nearIcon {
   height: 100px;
   justify-self: center;
+}
+.denverIcon {
+  justify-self: center;
+  margin-left: 96px;
 }
 .hongbaoIcon {
   width: 130px;
@@ -64,5 +74,8 @@
   }
   .eventName.hongbao {
     height: 85px;
+  }
+  .denverIcon {
+    margin-left: 0;
   }
 }

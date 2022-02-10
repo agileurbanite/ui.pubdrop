@@ -9,6 +9,10 @@
   justify-self: center;
   align-self: baseline;
 }
+.container.ethdenver {
+  background-color: unset;
+}
+
 @media (max-width: 650px) {
   .container {
     padding: 20px 10px;
