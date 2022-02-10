@@ -21,6 +21,13 @@
 .sf {
   background-image: url(../images/sf/background-2005-1388.jpg);
 }
+
+.ethdenver {
+  background-image: url(../images/ethdenver/background-3343-2234.png);
+  background-size: 100% 100%;
+  background-color: #191231;
+}
+
 .hongbao{
   background-image: url(../images/hongbao/background.png);
   background-size: auto;

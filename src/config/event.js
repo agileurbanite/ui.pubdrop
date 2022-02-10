@@ -24,6 +24,11 @@ const events = {
     logoText: hongbao,
     mainUrl: 'hongbao.near.org',
   },
+  ethdenver: {
+    name: 'ethdenver',
+    logoText: '',
+    mainUrl: 'ethdenver.near.org',
+  },
 };
 
 export const event = events[process.env.REACT_APP_EVENT];

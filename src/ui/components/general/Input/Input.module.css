@@ -22,6 +22,16 @@
   background-origin: border-box;
   background-clip: padding-box, border-box;
 }
+.input.ethdenver{
+  background-image: linear-gradient(#000, #000), linear-gradient(
+          -90deg
+          , #A463B0 0%, #5f8afa 100%);
+  border: double 3px transparent;
+  border-radius: 25px;
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
 .input::placeholder {
   color: #cacaca;
 }

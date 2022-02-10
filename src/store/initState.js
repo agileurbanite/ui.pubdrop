@@ -6,7 +6,6 @@ const initState = {
   phone: null,
   claimPublicKey: null,
   claimSecretKey: null,
-  confirmMethod: 'phone',
   loading: {
     app: true,
     sendEmail: false,
