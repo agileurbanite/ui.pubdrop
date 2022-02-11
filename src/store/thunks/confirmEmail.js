@@ -16,6 +16,7 @@ export const confirmEmail = thunk(async (actions, payload, helpers) => {
       .post(api.confirmEmail, {
         json: { email, confirmationCode: Number(confirmationCode) },
         searchParams: { event: process.env.REACT_APP_EVENT },
+        timeout: 30000,
       })
       .json();
 
