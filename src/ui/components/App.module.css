@@ -12,6 +12,9 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+.brand {
+  background-color: #111;
+}
 .miami {
   background-image: url(../images/miami/background-2005-1388.jpg);
 }
