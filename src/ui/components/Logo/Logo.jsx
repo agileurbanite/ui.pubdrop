@@ -3,10 +3,11 @@ import nextIcon from '../../images/near-logo-icon.svg';
 import { event } from '../../../config/event';
 import styles from './Logo.module.css';
 import cn from 'classnames';
+import brandLogo from '../../images/brand/brand.svg';
 
 const showLogo = ['sf', 'miami'];
 const showNearText = ['sf', 'miami', 'hongbao'];
-const showLogoText = ['sf', 'miami', 'hongbao'];
+const showLogoText = ['sf', 'miami', 'hongbao', 'brand'];
 
 const DenverIcon = () => {
   return (
@@ -275,6 +276,10 @@ const DenverIcon = () => {
   );
 };
 
+const BrandIcon = () => {
+  return <img class={styles.brandLogo} src={brandLogo} alt="brand logo" />;
+};
+
 export const Logo = () => (
   <div className={cn(styles.container, styles[event.name])}>
     {showNearText.includes(event.name) && (
@@ -284,6 +289,7 @@ export const Logo = () => (
       <img src={nextIcon} alt="NEAR logo" className={styles.nearIcon} />
     )}
     {event.name === 'ethdenver' && <DenverIcon />}
+    {event.name === 'brand' && <BrandIcon />}
     {showLogoText.includes(event.name) && (
       <img
         src={event.logoText}
