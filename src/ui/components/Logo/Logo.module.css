@@ -24,6 +24,9 @@
   grid-template-rows: 70px;
   margin-bottom: 5vh;
 }
+.container.brand {
+  margin-top: 20vh;
+}
 .nearText {
   height: 45px;
   justify-self: center;
@@ -36,6 +39,9 @@
 .denverIcon {
   justify-self: center;
   margin-left: 96px;
+}
+.brandLogo {
+  justify-self: center;
 }
 .hongbaoIcon {
   width: 130px;
@@ -52,6 +58,10 @@
   justify-self: center;
   align-self: end;
   height: 50px;
+}
+
+.eventName.brand {
+  align-self: center;
 }
 
 @media (max-width: 650px) {
