@@ -18,6 +18,10 @@
   background: linear-gradient(180deg, #FFC860 0%, #E3935B 100%);
   box-shadow: 0px 0px 10px 0px #00000040;
 }
+.button.brand {
+  color: #000;
+  background: linear-gradient(180deg, #999 0%, #fff 100%);
+}
 .button > span {
   margin-right: 4px;
 }
@@ -29,4 +33,7 @@
 .button.hongbao:disabled {
   background: #e4945b;
   box-shadow: none;
+}
+.button.brand:disabled {
+  color: #fff;
 }
