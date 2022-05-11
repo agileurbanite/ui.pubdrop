@@ -8,6 +8,8 @@ import { Checkbox } from '@mui/material';
 import { Disclaimer } from '../Disclaimer/Disclaimer';
 import { Button } from '../../general/Button/Button';
 import { ErrorText } from '../../general/ErrorText/ErrorText';
+import cn from 'classnames';
+import { event } from '../../../../config/event';
 import ReCaptchaV2 from 'react-google-recaptcha';
 
 const SignUpEmail = () => {
@@ -56,7 +58,7 @@ const SignUpEmail = () => {
         <ReCaptchaV2 sitekey={process.env.REACT_APP_CAPTCHA_KEY} onChange={handleCaptchaToken} />
       </div>
       <div className={css.label}>
-        <Checkbox {...register('disclaimer')} className={css.checkbox} />
+        <Checkbox {...register('disclaimer')} className={cn(css.checkbox, css[event.name])} />
         <span className={css.labelText}>
           I have read, understood and subscribe to the{' '}
           <button className={css.disclaimer} ref={anchorEl} onClick={openDisclaimer}>

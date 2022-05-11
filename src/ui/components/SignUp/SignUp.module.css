@@ -15,6 +15,11 @@
   padding: 20px;
 }
 
+.container.brand {
+  background-color: unset;
+  padding: 20px;
+}
+
 .container.hongbao {
   background: linear-gradient(169.23deg, #DB5555 1.26%, #C1262E 92.01%);
   box-shadow: 0px 2px 20px 0px #00000080;
@@ -110,3 +115,6 @@
   color: #f2b05d!important;
 }
 
+.checkbox.brand {
+  color: #ffffff!important;
+}
