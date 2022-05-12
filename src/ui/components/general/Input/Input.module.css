@@ -31,7 +31,7 @@
   background-origin: border-box;
   background-clip: padding-box, border-box;
 }
-.input.brand {
+.input.brand, .input.bermuda {
   border-color: #fff;
 }
 

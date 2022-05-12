@@ -1,3 +1,6 @@
+body {
+  background-color: #111;
+}
 .container {
   width: 100vw;
   min-height: 100vh;
@@ -23,6 +26,12 @@
 }
 .sf {
   background-image: url(../images/sf/background-2005-1388.jpg);
+}
+.bermuda {
+  background-image: url(../images/bermuda/sailgp-linkdrop-bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center top;
 }
 
 .ethdenver {
