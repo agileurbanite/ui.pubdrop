@@ -52,7 +52,7 @@
   justify-self: center;
   line-height: 3.5rem;
   text-align: center;
-  width: 423px;
+  width: 25%;
 }
 .hongbaoIcon {
   width: 130px;
@@ -98,5 +98,8 @@
   }
   .denverIcon {
     margin-left: 0;
+  }
+  .bermudaText {
+    width: 90%;
   }
 }

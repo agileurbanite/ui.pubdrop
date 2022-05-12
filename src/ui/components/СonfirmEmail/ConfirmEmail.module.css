@@ -9,7 +9,7 @@
   justify-self: center;
   align-self: baseline;
 }
-.container.ethdenver {
+.container.ethdenver, .container.bermuda {
   background-color: unset;
 }
 
