@@ -29,6 +29,7 @@
 }
 .container.bermuda {
   margin-top: 20vh;
+  margin-bottom: 5vh;
 }
 .nearText {
   height: 45px;
@@ -52,7 +53,7 @@
   justify-self: center;
   line-height: 3.5rem;
   text-align: center;
-  width: 25%;
+  width: 423px;
 }
 .hongbaoIcon {
   width: 130px;
@@ -81,6 +82,10 @@
     margin-top: 30px;
     margin-bottom: 30px;
   }
+  .container.bermuda {
+    grid-template-rows: 50px 60px 165px;
+    margin-top: 20px;
+  }
   .nearText {
     height: 28px;
   }
@@ -100,6 +105,8 @@
     margin-left: 0;
   }
   .bermudaText {
+    font-size: 2rem;
     width: 90%;
+    line-height: 3rem;
   }
 }
