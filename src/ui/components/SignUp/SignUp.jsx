@@ -17,8 +17,12 @@ export const SignUp = () => {
           </div>
         </div>
       )}
-      <h1 className={cn(css.h1, css[event.name])}>Welcome</h1>
-      <h2 className={cn(css.h2, css[event.name])}>Claim your NEARDROP</h2>
+      {event.name !== 'bermuda' && (
+        <div>
+          <h1 className={cn(css.h1, css[event.name])}>Welcome</h1>
+          <h2 className={cn(css.h2, css[event.name])}>Claim your NEARDROP</h2>
+        </div>
+      )}
       {signUpMethod.toLowerCase() === 'email' ? <SignUpEmail /> : <SignUpPhone />}
     </div>
   );

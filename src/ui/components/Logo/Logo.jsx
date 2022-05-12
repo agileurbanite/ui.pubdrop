@@ -4,10 +4,11 @@ import { event } from '../../../config/event';
 import styles from './Logo.module.css';
 import cn from 'classnames';
 import brandLogo from '../../images/brand/brand.svg';
+import { style } from '@mui/system';
 
 const showLogo = ['sf', 'miami'];
 const showNearText = ['sf', 'miami', 'hongbao'];
-const showLogoText = ['sf', 'miami', 'hongbao', 'brand'];
+const showLogoText = ['sf', 'miami', 'hongbao', 'brand','bermuda'];
 
 const DenverIcon = () => {
   return (
@@ -280,6 +281,10 @@ const BrandIcon = () => {
   return <img class={styles.brandLogo} src={brandLogo} alt="brand logo" />;
 };
 
+const BermudaIcon = () => {
+  return <p class={styles.bermudaText}>Jump in, create a wallet, and start your voyage.</p>;
+}
+
 export const Logo = () => (
   <div className={cn(styles.container, styles[event.name])}>
     {showNearText.includes(event.name) && (
@@ -297,5 +302,6 @@ export const Logo = () => (
         className={cn(styles.eventName, styles[event.name])}
       />
     )}
+    {event.name === 'bermuda' && <BermudaIcon />}
   </div>
 );

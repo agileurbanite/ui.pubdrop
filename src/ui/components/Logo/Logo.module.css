@@ -27,6 +27,9 @@
 .container.brand {
   margin-top: 20vh;
 }
+.container.bermuda {
+  margin-top: 20vh;
+}
 .nearText {
   height: 45px;
   justify-self: center;
@@ -42,6 +45,14 @@
 }
 .brandLogo {
   justify-self: center;
+  width: 423px;
+}
+.bermudaText {
+  font-size: 2rem;
+  justify-self: center;
+  line-height: 3.5rem;
+  text-align: center;
+  width: 423px;
 }
 .hongbaoIcon {
   width: 130px;
