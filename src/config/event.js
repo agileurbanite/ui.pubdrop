@@ -3,6 +3,7 @@ import nyc from '../ui/images/newYork/nyc.svg';
 import sanFrancisco from '../ui/images/sf/san-francisco.svg';
 import hongbao from '../ui/images/hongbao/hongbao.svg';
 import brand from "../ui/images/brand/brand-copy.svg";
+import bermuda from "../ui/images/bermuda/bermuda.png";
 
 const events = {
   miami: {
@@ -34,6 +35,11 @@ const events = {
     name: 'brand',
     logoText: brand,
     mainUrl: 'brand.near.org',
+  },
+  bermuda: {
+    name: 'bermuda',
+    logoText: bermuda,
+    mainUrl: 'bermuda.near.org',
   }
 };
 
